@@ -2,7 +2,7 @@
 let rect_width  = 20;
 let rect_height = 20;
 
-let colorValue = 'yellow';
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -25,28 +25,26 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let eyeY = headY - 10;
   let earY = headY - 40;
   let eyeSize = 10;
+  let noiseSize = 5;
   
-  fill(255);
+
+  text("(" + mouseX + ", " + mouseY + ")" , mouseX, mouseY);
+  
+  //fill(255);
   stroke(0, 0, 0);
-
-
-
-  if (mouseIsPressed){
-    colorValue = 'red';
-  }
-  else {
-    colorValue = 'yellow';
-  }
-  fill(colorValue);
+  line(80, 80, 100, 100);
   ellipse(headX, headY, 70, 70); //head
 
-  fill(0, 0, 0) // blue colour
+  fill(255) // blue colour
 
-  ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye // 60 before
+   ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
 
-  ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
-  stroke(0, 0, 0);
-  arc(75, 90, 30, 15, 0, 180);
+   ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
+   ellipse(headX, headY + 5, noiseSize , noiseSize - 3);//noise
+  //  noFill();
+  //  curve(5, 86, 63, 84, 63, 121, 10, 95);
+  // stroke(0, 0, 0);
+  // arc(75, 90, 30, 15, 0, 180);
 
   // line(headX - 5, headY + 10, headX + 5, headY + 5);
   // line(headX + 5, headY + 10, headX - 5, headY + 5);
