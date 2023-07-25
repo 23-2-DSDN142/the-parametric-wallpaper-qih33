@@ -30,17 +30,17 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   text("(" + mouseX + ", " + mouseY + ")" , mouseX, mouseY);
   
-  //fill(255);
-  stroke(0, 0, 0);
-  line(80, 80, 100, 100);
-  ellipse(headX, headY, 70, 70); //head
+  
+  // stroke(0, 0, 0);
+  // line(80, 80, 100, 100);
+  // ellipse(headX, headY, 70, 70); //head
 
-  fill(255) // blue colour
+  // fill(255) // blue colour
 
-   ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
+  //  ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
 
-   ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
-   ellipse(headX, headY + 5, noiseSize , noiseSize - 3);//noise
+  //  ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
+  //  ellipse(headX, headY + 5, noiseSize , noiseSize - 3);//noise
   //  noFill();
   //  curve(5, 86, 63, 84, 63, 121, 10, 95);
   // stroke(0, 0, 0);
