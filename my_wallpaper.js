@@ -28,19 +28,19 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let noiseSize = 5;
   
 
-  text("(" + mouseX + ", " + mouseY + ")" , mouseX, mouseY);
+  //text("(" + mouseX + ", " + mouseY + ")" , mouseX, mouseY);
   
   
-  // stroke(0, 0, 0);
-  // line(80, 80, 100, 100);
-  // ellipse(headX, headY, 70, 70); //head
+  stroke(0, 0, 0);
+  //line(80, 80, 100, 100);
+  ellipse(headX, headY, 70, 70); //head
 
-  // fill(255) // blue colour
+  fill(255) // blue colour
 
-  //  ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
+   ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
 
-  //  ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
-  //  ellipse(headX, headY + 5, noiseSize , noiseSize - 3);//noise
+   ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
+   ellipse(headX, headY + 5, noiseSize , noiseSize - 3);//noise
   //  noFill();
   //  curve(5, 86, 63, 84, 63, 121, 10, 95);
   // stroke(0, 0, 0);
@@ -48,6 +48,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   // line(headX - 5, headY + 10, headX + 5, headY + 5);
   // line(headX + 5, headY + 10, headX - 5, headY + 5);
+  console.log(mouseX);
 
 
 }
