@@ -33,6 +33,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
   stroke(0, 0, 0);
   //line(80, 80, 100, 100);
+  fill('yellow');
   ellipse(headX, headY, 70, 70); //head
 
   fill(255) // blue colour
