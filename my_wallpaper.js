@@ -37,6 +37,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(headX, headY, 70, 70); //head
 
   fill(255) // blue colour
+  ellipse(84, 35, 20, 20);
+  ellipse(69, 34, 20, 20);
+  ellipse(56, 38, 20, 20);
   ellipse(45, 45, 20, 20);
   ellipse(36, 58, 20, 20);
   ellipse(32, 73, 20, 20);
@@ -48,38 +51,25 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(90, 110, 20, 20);
   ellipse(105, 103, 20, 20);
   
-  ellipse(103, 47, 20, 20);
+  
+  ellipse(99, 43, 20, 20);
   ellipse(111, 58, 20, 20);
   ellipse(114, 73, 20, 20);
   ellipse(113, 88, 20, 20);
-  strokeWeight(5);
-  point(88, 88);
-  point(68, 99);
-  point(80, 99);
-  point(60, 88);
-  strokeWeight(1);
+ 
+  strokeWeight(1); //mouth
   noFill();
   beginShape();
   curveVertex(88, 88);
   curveVertex(88, 88);
-  // curveVertex(68, 99);
-  // curveVertex(80, 99);
+  curveVertex(80, 95);
+  curveVertex(68, 95);
   curveVertex(60, 88);
   curveVertex(60, 88);
   endShape();
 
-   //ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
+  ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
 
-  //  ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
-  //  ellipse(headX, headY + 5, noiseSize , noiseSize - 3);//noise
-  //  noFill();
-  //  curve(5, 86, 63, 84, 63, 121, 10, 95);
-  // stroke(0, 0, 0);
-  // arc(75, 90, 30, 15, 0, 180);
-
-  // line(headX - 5, headY + 10, headX + 5, headY + 5);
-  // line(headX + 5, headY + 10, headX - 5, headY + 5);
-  console.log(mouseX);
-
-
+  ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
+  
 }
