@@ -1,7 +1,7 @@
 //your parameter variables go here!
 let rect_width  = 20;
 let rect_height = 20;
-
+let background_color = '#363636';
 
 
 function setup_wallpaper(pWallpaper) {
@@ -16,7 +16,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); //light honeydew green colour
+   background(background_color);
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -26,6 +26,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let earY = headY - 40;
   let eyeSize = 10;
   let noiseSize = 5;
+  let positionY = 80;
+
   
 
   //text("(" + mouseX + ", " + mouseY + ")" , mouseX, mouseY);
@@ -74,12 +76,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   noStroke(0, 0, 0);
   fill('green');
-  ellipse(150, 43, 55, 55);
+  ellipse(150, 43 + positionY, 55, 55);
   fill('orange');
-  ellipse(150, 43, 35, 35); //Big eye
+  ellipse(150, 43 + positionY, 35, 35); //Big eye
   fill(255)
-  ellipse(145, 35, 16, 16);
-  ellipse(154, 54, 12, 12);
+  ellipse(145, 35 + positionY, 16, 16);
+  ellipse(154, 54 + positionY, 12, 12);
 
 
   
