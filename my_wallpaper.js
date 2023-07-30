@@ -71,5 +71,19 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
 
   ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
+
+  noStroke(0, 0, 0);
+  fill('green');
+  ellipse(150, 43, 55, 55);
+  fill('orange');
+  ellipse(150, 43, 35, 35); //Big eye
+  fill(255)
+  ellipse(145, 35, 16, 16);
+  ellipse(154, 54, 12, 12);
+
+
+  
+
+
   
 }
