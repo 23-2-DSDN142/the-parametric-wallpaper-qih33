@@ -5,7 +5,7 @@ let background_color = '#363636';
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
@@ -24,9 +24,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let headY = 75;
   let eyeY = headY - 10;
   let earY = headY - 40;
-  let eyeSize = 10;
+ // let eyeSize = 10;
   let noiseSize = 5;
-  // let positionY = 80;
 
   
   draw_face(headX, headY, 20, '#f7db4f', '#ec2049');
@@ -69,7 +68,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // curveVertex(60, 88);
   // curveVertex(60, 88);
   // endShape();
-  draw_eye(headX, eyeY, eyeSize);
+  draw_eye(headX, eyeY, 10, 15);
   draw_mouth();
   draw_bigeye('green', 'orange', 80);
 
@@ -117,14 +116,14 @@ function draw_face(headX, headY, faceSize, faceColor,sideColor)
   ellipse(113, 88, faceSize, faceSize);
 }
 
-function draw_eye(headX, eyeY, eyeSize)
+function draw_eye(headX, eyeY, eyeSizeX, eyeSizeY)
 {
   stroke(0, 0, 0);
   fill('white');
   strokeWeight(1);
-  ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
+  ellipse(headX - 15, eyeY, eyeSizeX, eyeSizeY) //left eye 
 
-  ellipse(headX + 15, eyeY, eyeSize, eyeSize) // right eye
+  ellipse(headX + 15, eyeY, eyeSizeX, eyeSizeY) // right eye
 
 }
 
