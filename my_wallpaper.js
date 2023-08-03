@@ -10,8 +10,8 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.cell_width  = 250;
+  pWallpaper.grid_settings.cell_height = 250;
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
@@ -69,7 +69,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // curveVertex(60, 88);
   // endShape();
   draw_eye(headX, eyeY, 10, 15);
-  draw_mouth();
+  draw_mouth('#ff847c');
   draw_bigeye('green', 'orange', 80);
 
   // ellipse(headX - 15, eyeY, eyeSize, eyeSize) //left eye 
@@ -127,10 +127,10 @@ function draw_eye(headX, eyeY, eyeSizeX, eyeSizeY)
 
 }
 
-function draw_mouth(){
+function draw_mouth(mouthColor){
     strokeWeight(1); //mouth
 
-    noFill();
+    fill(mouthColor);
     beginShape();
     curveVertex(88, 88);
     curveVertex(88, 88);
@@ -139,6 +139,7 @@ function draw_mouth(){
     curveVertex(60, 88);
     curveVertex(60, 88);
     endShape();
+    line(88,88, 60,88);
 }
 
 function draw_bigeye(outsideColor, insideColor, positionY){
