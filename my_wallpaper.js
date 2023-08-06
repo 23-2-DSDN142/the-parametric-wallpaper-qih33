@@ -1,42 +1,40 @@
 //your parameter variables go here!
-var background_color = '#f4f1de';
+var background_color = '#363636';
 var headX = 75;
 var headY = 75;
 var eyeY = headY - 10;
 var face_color = '#f7db4f';
-var face_color1 = '#f7db4f';
+var face_color1 = '#e1f5c4'; 
 var face_color2 = '#ede574';
 var face_color3 = '#f9d423';
 var face_color4 = '#fc913a';
 var face_color5 = '#ff4e50';
-var face_color6 = '#ff4e50';
-var face_color7 = '#ff4e50';
-var face_color8 = '#ff4e50';
+var face_color6 = '#e1f5c4';
+var face_color7 = '#ede574';
+var face_color8 = '#f9d423';
 var face_color9 = '#fc913a';
-var face_color10 = '#fc913a';
-var face_color11 = '#f7db4f';
-var face_color12 = '#f7db4f';
-var face_color13 = '#fc913a';
-var face_color14 = '#fc913a';
-var side_color2 = '#ffffff';
+var face_color10 = '#ff4e50';
+var face_color11 = '#a7226e';
+var face_color12 = '#ec2049';
+var face_color13 = '#f26b38';
+var face_color14 = '#f7db4f';
 var faceSize = 20;
 var eyeSizeX = 10;
 var eyeSizeY = 15;
 var eye_light = 255;
-var eye_color1 = '#ff686b';
-var eye_color2 = '#ff686b';
-var mouthColor = '#ff686b';
-var outsideColor = '#f34a4a';
-var insideColor = '#f1d3bc';
-var positionX = 20;
+var eye_color1 = '#363636';
+var eye_color2 = '#363636';
+var mouthColor = '#ff847c';
+var outsideColor = '#99b898';
+var insideColor = '#ff847c';
+var positionX = 10;
 var positionY = 80;
-var stroke_color = '#615049';
-var stroke_weight = 3;
-
+var stroke_color = '#363636';
+var stroke_weight = 1;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(A3);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -51,7 +49,7 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-
+  // if background color is black then draw the colorfull face
   if (background_color ==='#363636')
   {
      draw_colorfulface();
@@ -71,7 +69,7 @@ function draw_face()
   stroke('#363636');
   fill(face_color);
   ellipse(headX, headY, 70, 70); //head
-  fill(side_color2) ;// blue colour
+  fill(side_color2) ;
   ellipse(84, 31, faceSize, faceSize);
   ellipse(64, 32, faceSize, faceSize);
   ellipse(47, 41, faceSize, faceSize);
@@ -139,8 +137,7 @@ function draw_eye()
 }
 
 function draw_mouth(){
-    strokeWeight(1); //mouth
-
+    strokeWeight(1); 
     fill(mouthColor);
     beginShape();
     curveVertex(88, 88);
@@ -154,7 +151,16 @@ function draw_mouth(){
 }
 
 function draw_bigeye(){
-  stroke(stroke_color);
+
+  if (background_color ==='#363636')
+  {
+    noStroke();
+  }
+  else
+  {
+    stroke(stroke_color);
+  }
+  // stroke(stroke_color);
   strokeWeight(stroke_weight);
   fill(outsideColor);
   ellipse(150 + positionX, 43 + positionY, 55, 55);
