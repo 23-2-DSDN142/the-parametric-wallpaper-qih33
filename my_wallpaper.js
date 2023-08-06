@@ -1,12 +1,42 @@
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let background_color = '#363636';
+var background_color = '#f4f1de';
+var headX = 75;
+var headY = 75;
+var eyeY = headY - 10;
+var face_color = '#f7db4f';
+var face_color1 = '#f7db4f';
+var face_color2 = '#ede574';
+var face_color3 = '#f9d423';
+var face_color4 = '#fc913a';
+var face_color5 = '#ff4e50';
+var face_color6 = '#ff4e50';
+var face_color7 = '#ff4e50';
+var face_color8 = '#ff4e50';
+var face_color9 = '#fc913a';
+var face_color10 = '#fc913a';
+var face_color11 = '#f7db4f';
+var face_color12 = '#f7db4f';
+var face_color13 = '#fc913a';
+var face_color14 = '#fc913a';
+var side_color2 = '#ffffff';
+var faceSize = 20;
+var eyeSizeX = 10;
+var eyeSizeY = 15;
+var eye_light = 255;
+var eye_color1 = '#ff686b';
+var eye_color2 = '#ff686b';
+var mouthColor = '#ff686b';
+var outsideColor = '#f34a4a';
+var insideColor = '#f1d3bc';
+var positionX = 20;
+var positionY = 80;
+var stroke_color = '#615049';
+var stroke_weight = 3;
 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -20,36 +50,28 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  let headX = 75;
-  let headY = 75;
-  let eyeY = headY - 10;
-  // let earY = headY - 40;
- // let eyeSize = 10;
-  let noiseSize = 5;
 
-  if (background_color !=='#363636')
+
+  if (background_color ==='#363636')
   {
-    console.log('true');
+     draw_colorfulface();
+     
   }
   else {
-    console.log('false');
+    draw_face()
   }
-
-  draw_colorfulface(headX, headY, 20, '#f7db4f', '#ec2049');
-  //draw_face(headX, headY, 20, '#f7db4f', '#ec2049');
   
-  draw_eye(headX, eyeY, 10, 15);
-  draw_mouth('#ff847c');
-  draw_bigeye('green', 'orange', 10, 80);
-
+  draw_eye();
+  draw_mouth();
+  draw_bigeye();
 }
 
-function draw_face(headX, headY, faceSize, faceColor,sideColor)
+function draw_face()
 {
-  stroke(0, 0, 0);
-  fill(faceColor);
+  stroke('#363636');
+  fill(face_color);
   ellipse(headX, headY, 70, 70); //head
-  fill(sideColor) // blue colour
+  fill(side_color2) ;// blue colour
   ellipse(84, 31, faceSize, faceSize);
   ellipse(64, 32, faceSize, faceSize);
   ellipse(47, 41, faceSize, faceSize);
@@ -66,51 +88,49 @@ function draw_face(headX, headY, faceSize, faceColor,sideColor)
   ellipse(116, 94, faceSize, faceSize);
 }
 
-function draw_colorfulface(headX, headY, faceSize, faceColor,sideColor)
+function draw_colorfulface()
 {
-  stroke(0, 0, 0);
-  fill(faceColor);
+  stroke(stroke_color);
+  fill(face_color);
   ellipse(headX, headY, 70, 70); //head
-  // fill(sideColor) // blue colour
-  fill('#e1f5c4');
+  fill(face_color1);
   ellipse(84, 31, faceSize, faceSize);
-  fill('#ede574');
+  fill(face_color2);
   ellipse(64, 32, faceSize, faceSize);
-  fill('#f9d423');
+  fill(face_color3);
   ellipse(47, 41, faceSize, faceSize);
-  fill('#fc913a');
+  fill(face_color4);
   ellipse(35, 56, faceSize, faceSize);
-  fill('#ff4e50');
+  fill(face_color5);
   ellipse(31, 75, faceSize, faceSize);
-  fill('#e1f5c4');
+  fill(face_color6);
   ellipse(35, 94, faceSize, faceSize);
-  fill('#ede574');
+  fill(face_color7);
   ellipse(47, 110, faceSize, faceSize);
-  fill('#f9d423');
+  fill(face_color8);
   ellipse(65, 118, faceSize, faceSize);
-  fill('#fc913a');
+  fill(face_color9);
   ellipse(85, 118, faceSize, faceSize);
-  fill('#ff4e50');
+  fill(face_color10);
   ellipse(103, 109, faceSize, faceSize);
-  fill('#a7226e');
+  fill(face_color11);
   ellipse(103, 39, faceSize, faceSize);
-  fill('#ec2049');
+  fill(face_color12);
   ellipse(115, 56, faceSize, faceSize);
-  fill('#f26b38');
+  fill(face_color13);
   ellipse(119, 75, faceSize, faceSize);
-  fill('##f7db4f');
+  fill(face_color14);
   ellipse(116, 94, faceSize, faceSize);
 }
 
-function draw_eye(headX, eyeY, eyeSizeX, eyeSizeY)
+function draw_eye()
 {
-  stroke(0, 0, 0);
-  fill('#363636');
-  strokeWeight(1);
+  stroke('#363636');
+  fill(eye_color1);
   ellipse(headX - 15, eyeY, eyeSizeX, eyeSizeY) //left eye 
-
+  fill(eye_color2);
   ellipse(headX + 15, eyeY, eyeSizeX, eyeSizeY) // right eye
-  fill('white');
+  fill(eye_light);
   ellipse(60, 60, 7, 7) // left eye
   ellipse(58, 67, 6, 6) // left eye
   ellipse(90, 60, 7, 7) // right eye
@@ -118,7 +138,7 @@ function draw_eye(headX, eyeY, eyeSizeX, eyeSizeY)
 
 }
 
-function draw_mouth(mouthColor){
+function draw_mouth(){
     strokeWeight(1); //mouth
 
     fill(mouthColor);
@@ -133,13 +153,14 @@ function draw_mouth(mouthColor){
     line(88,88, 60,88);
 }
 
-function draw_bigeye(outsideColor, insideColor,positionX,  positionY){
-  noStroke(0, 0, 0);
+function draw_bigeye(){
+  stroke(stroke_color);
+  strokeWeight(stroke_weight);
   fill(outsideColor);
-  ellipse(150+positionX, 43 + positionY, 55, 55);
+  ellipse(150 + positionX, 43 + positionY, 55, 55);
   fill(insideColor);
-  ellipse(150+positionX, 43 + positionY, 35, 35); //Big eye
-  fill(255)
-  ellipse(145+positionX, 35 + positionY, 16, 16);
-  ellipse(154+positionX, 54 + positionY, 12, 12);
+  ellipse(150 + positionX, 43 + positionY, 35, 35); //Big eye
+  fill(eye_light)
+  ellipse(145 + positionX, 35 + positionY, 16, 16);
+  ellipse(154 + positionX, 54 + positionY, 12, 12);
 }
