@@ -105,11 +105,12 @@ function setup_wallpaper(pWallpaper) {
 /////////////////////////////////
 
 Wallpaper 3:
+
 var background_color = '#363636';
 var headX = 75;
 var headY = 75;
 var eyeY = headY - 10;
-var face_color = '#fff3b0';//changed
+var face_color = '#e5fcc2';//changed
 var face_color1 = '#f7db4f';//changed
 var face_color2 = '#ede574';//changed
 var face_color3 = '#f9d423';//changed
