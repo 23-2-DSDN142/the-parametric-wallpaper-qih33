@@ -1,41 +1,40 @@
 //your parameter variables go here!
-var background_color = '#fe4365';
+var background_color = '#363636';
 var headX = 75;
 var headY = 75;
 var eyeY = headY - 10;
 var face_color = '#f7db4f';
-var face_color1 = '#f7db4f';
+var face_color1 = '#e1f5c4'; 
 var face_color2 = '#ede574';
 var face_color3 = '#f9d423';
 var face_color4 = '#fc913a';
 var face_color5 = '#ff4e50';
-var face_color6 = '#ff4e50';
-var face_color7 = '#ff4e50';
-var face_color8 = '#ff4e50';
+var face_color6 = '#e1f5c4';
+var face_color7 = '#ede574';
+var face_color8 = '#f9d423';
 var face_color9 = '#fc913a';
-var face_color10 = '#fc913a';
-var face_color11 = '#f7db4f';
-var face_color12 = '#f7db4f';
-var face_color13 = '#fc913a';
-var face_color14 = '#fc913a';
-var side_color2 = '#ffffff';
+var face_color10 = '#ff4e50';
+var face_color11 = '#a7226e';
+var face_color12 = '#ec2049';
+var face_color13 = '#f26b38';
+var face_color14 = '#f7db4f';
 var faceSize = 20;
 var eyeSizeX = 10;
 var eyeSizeY = 15;
 var eye_light = 255;
-var eye_color1 = '#ff686b';
-var eye_color2 = '#ff686b';
-var mouthColor = '#ff686b';
-var outsideColor = '#f34a4a';
-var insideColor = '#f1d3bc';
-var positionX = 20;
+var eye_color1 = '#363636';
+var eye_color2 = '#363636';
+var mouthColor = '#ff847c';
+var outsideColor = '#99b898';
+var insideColor = '#ff847c';
+var positionX = 10;
 var positionY = 80;
-var stroke_color = '#615049';
-var stroke_weight = 3;
+var stroke_color = '#f4f1de';
+var stroke_weight = 0;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings

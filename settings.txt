@@ -39,8 +39,8 @@ var outsideColor = '#99b898';
 var insideColor = '#ff847c';
 var positionX = 10;
 var positionY = 80;
-var stroke_color = '#363636';
-var stroke_weight = 1;
+var stroke_color = '#f4f1de';
+var stroke_weight = 0;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
